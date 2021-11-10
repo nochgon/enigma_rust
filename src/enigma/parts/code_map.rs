@@ -70,8 +70,8 @@ pub fn create(mode: &str) -> Result<CodeMap, &'static str> {
     
         for (i, &char) in list_char.iter().enumerate() {
             let i_i32 = i as i32;
-            map_char.insert(char, i_i32 + 1);
-            map_char_rev.insert(i_i32 + 1, char);
+            map_char.insert(char, i_i32);
+            map_char_rev.insert(i_i32, char);
         }
         Ok(CodeMap {
             map_char: map_char, 
